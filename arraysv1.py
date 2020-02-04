@@ -29,17 +29,8 @@ def kvalues(arr, t):
 # Problem 3
 # Given two arrays a and b of numbers and a target value t, 
 # find a number from each array whose sum is closest to t.
-# Example: a=[9, 13, 1, 8, 12, 4, 0, 5],  b=[3, 17, 4, 14, 6],  t=20  =>  
-# [13, 6] or [4, 17] or [5, 14]
-# def closerSum(curr, given, t):
-#     if (abs(t-curr[0]) > abs(t-given[0])):
-#         return 0
-#     if (curr[0] > given[0]):
-#         return -1
-#     return 1
-
 def arrsum(a1, a2, t):
-    
+    pass
 
 def test():
     print("Testing Problem 1...")
