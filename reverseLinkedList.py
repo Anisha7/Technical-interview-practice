@@ -50,6 +50,8 @@ def reverseLinkedListIterative(ll):
     ll.tail = temp
     return
 
+
+# Creating a simple linked list structure
 class Node:
     def __init__(self, data):
         self.data = data
@@ -66,6 +68,7 @@ class LinkedList:
             curr = curr.next
             self.tail = curr
 
+# Converts linked list to a list then prints it
 def printList(ll):
     curr = ll.head
     reversedArray = []
@@ -74,6 +77,7 @@ def printList(ll):
         curr = curr.next
     print(reversedArray)
 
+# Tests recursive and iterative methods
 def test():
     ll = LinkedList([0,1,2,3,4,5])
     print("Testing recursive reverse linked list")
