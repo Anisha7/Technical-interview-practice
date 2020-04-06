@@ -1,4 +1,4 @@
-# in place reverse linked list methods
+# in place reverse linked list methods: O(N) time complexity and O(1) space complexity
 
 def reverseLinkedListRecursive(ll, prev=None, curr=None):
     # initialize parameters to store prev and curr
