@@ -25,8 +25,11 @@ def solveHanoiArrayHelper(n, start, end, temp):
     # base case: no disks to move
     if (n == 0 or len(start) == 0):
         return
+    # move first element of start to temp
     solveHanoiArrayHelper(n-1, start, temp, end)
+    # move second element of start to end
     end.append(start.pop())
+    # move element at temp to end
     solveHanoiArrayHelper(n-1, temp, end, start)
 
 solveHanoiArray(3)
