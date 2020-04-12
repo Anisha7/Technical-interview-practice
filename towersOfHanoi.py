@@ -57,10 +57,7 @@ solveHanoiDirections(3)
 
 # Now lets solve it by returning how many steps it will take
 # Optimized solution
-def solveHanoi(n):
-    return solveHanoiHelper(n, 'A', 'B', 'C')
-    
-def solveHanoiHelper(n, start, end, temp, memo={}):
+def solveHanoi(n, memo={}):
     # base case:
     if (n < 2):
         return  n
@@ -69,11 +66,11 @@ def solveHanoiHelper(n, start, end, temp, memo={}):
     if (n in memo):
         return memo[n]
 
-    result = 1 + solveHanoiHelper(n-1, start, temp, end, memo) + solveHanoiHelper(n-1, temp, end, start, memo)
+    result = 1 + solveHanoi(n-1, memo) + solveHanoi(n-1, memo)
     memo[n] = result
     return result
-
+    
 print(solveHanoi(3)) # 7
 print(solveHanoi(4)) # 15
-print(solveHanoi(1000))
+print(solveHanoi(1000)) # 10715086071862673209484250490600018105614048117055336074437503883703510511249361224931983788156958581275946729175531468251871452856923140435984577574698574803934567774824230985421074605062371141877954182153046474983581941267398767559165543946077062914571196477686542167660429831652624386837205668069375
 
